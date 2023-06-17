@@ -3,4 +3,18 @@
 */
 
 function wait(n) {
+
+    // var prom = new Promise()
+    return new Promise((resolve, reject)=>{
+        setTimeout(()=>{
+            resolve();
+        }, n*1000);
+    });
 }
+
+let promise = wait(3);
+
+promise.then(function(number) {
+    // Do something with the random number
+    console.log("Reached end");
+  });
